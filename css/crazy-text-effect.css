@@ -66,10 +66,18 @@
     pointer-events: none;
     opacity: 0.5;
     -webkit-transform: scale3d(0.2,1,1);
+    -moz-transform: scale3d(0.2,1,1);
+    -ms-transform: scale3d(0.2,1,1);
+    -o-transform: scale3d(0.2,1,1);
     transform: scale3d(0.2,1,1);
-    -webkit-transform-origin: 0% 50%;
-    transform-origin: 0% 50%;
+    -webkit-transform-origin: 50%;
+    -moz-transform-origin: 50%;
+    -ms-transform-origin: 50%;
+    -o-transform-origin: 50%;
+    transform-origin: 50%;
     -webkit-transition: opacity 0.3s;
+    -o-transition: opacity 0.3s;
+    -moz-transition: opacity 0.3s;
     transition: opacity 0.3s;
 
 }
@@ -80,15 +88,20 @@
 #fp-nav.fp-left ul li a.active span:not(.fp-sr-only)::before {
     opacity: 1;
     -webkit-animation: moveScale 0.5s ease-in forwards;
+    -moz-animation: moveScale 0.5s ease-in forwards;
     animation: moveScale 0.5s ease-in forwards;
 }
 #fp-nav.fp-right ul li a.active span:not(.fp-sr-only)::before {
     opacity: 1;
     -webkit-animation: moveScaleLeft 0.5s ease-in forwards;
+    -moz-animation: moveScaleLeft 0.5s ease-in forwards;
     animation: moveScaleLeft 0.5s ease-in forwards;
 }
 #fp-nav.fp-right ul li a span:not(.fp-sr-only):before{
     -webkit-transform-origin: 100% 50%;
+    -moz-transform-origin: 100% 50%;
+    -o-transform-origin: 100% 50%;
+    -ms-transform-origin: 100% 50%;
         transform-origin: 100% 50%;
 }
 @-webkit-keyframes moveScale {
@@ -97,8 +110,8 @@
         left: 0;
         -webkit-transform: scale3d(1,1,1);
         transform: scale3d(1,1,1);
-        -webkit-transform-origin: 0% 50%;
-        transform-origin: 0% 50%;
+        -webkit-transform-origin:  50%;
+        transform-origin:  50%;
     }
     51% {
         right: 0;
@@ -126,8 +139,8 @@
         left: 0;
         -webkit-transform: scale3d(1,1,1);
         transform: scale3d(1,1,1);
-        -webkit-transform-origin: 0% 50%;
-        transform-origin: 0% 50%;
+        -webkit-transform-origin:  50%;
+        transform-origin:  50%;
     }
     51% {
         right: 0;
@@ -154,8 +167,8 @@
         left: 0;
         -webkit-transform: scale3d(1,1,1);
         transform: scale3d(1,1,1);
-        -webkit-transform-origin: 0% 50%;
-        transform-origin: 0% 50%;
+        -webkit-transform-origin:  50%;
+        transform-origin:  50%;
     }
     51% {
         right: 0;
@@ -183,8 +196,8 @@
         left: 0;
         -webkit-transform: scale3d(1,1,1);
         transform: scale3d(1,1,1);
-        -webkit-transform-origin: 0% 50%;
-        transform-origin: 0% 50%;
+        -webkit-transform-origin:  50%;
+        transform-origin:  50%;
     }
     51% {
         right: 0;
@@ -230,8 +243,8 @@
         left: auto;
         -webkit-transform: scale3d(0.2,1,1);
         transform: scale3d(0.2,1,1);
-        -webkit-transform-origin: 0% 50%;
-        transform-origin: 0% 50%;
+        -webkit-transform-origin:  50%;
+        transform-origin:  50%;
     }
 }
 @keyframes moveScaleRight {
@@ -258,8 +271,8 @@
         left: auto;
         -webkit-transform: scale3d(0.2,1,1);
         transform: scale3d(0.2,1,1);
-        -webkit-transform-origin: 0% 50%;
-        transform-origin: 0% 50%;
+        -webkit-transform-origin: 50%;
+        transform-origin: 50%;
     }
 }
 #fp-nav ul li .fp-tooltip {
@@ -275,12 +288,18 @@
 }
 #fp-nav.fp-left ul li .fp-tooltip{
     -webkit-transform: translate3d(-115%,0,0);
+    -moz-transform: translated3d(-115%,0,0);
+    -ms-transform: translated3d(-115%,0,0);
+    -o-transform: translated3d(-115%,0,0);
     transform: translate3d(-115%,0,0);
     left: auto;
     padding: 0 0.75em 0 0;
 }
 #fp-nav.fp-right ul li .fp-tooltip{
     -webkit-transform: translate3d(100%,0,0);
+    -moz-transform: translated3d(-100%,0,0);
+    -ms-transform: translated3d(-100%,0,0);
+    -o-transform: translated3d(-100%,0,0);
     transform: translate3d(100%,0,0);
     right: 0;
     position:absolute;
@@ -291,7 +310,8 @@
     width: auto;
 }
 #fp-nav ul li a.active + .fp-tooltip {
-    -webkit-animation: moveToRight 0.5s 0.2s forwards;
+-webkit-animation: moveToRight 0.5s 0.2s forwards;
+-moz-animation: moveToRight 0.5s 0.2s forwards;
     animation: moveToRight 0.5s 0.2s forwards;
 }
 
